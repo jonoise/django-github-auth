@@ -1,13 +1,13 @@
-- [] have a basic understanding of JWT
-- [] get the code
+- [ ] have a basic understanding of JWT
+- [ ] get the code
   - [x] update callback in github
-  - [] implement callback in backend
+  - [ ] implement callback in backend
     - [x] callback receive a code
     - [x] get parameters code/state
     - [] validate state
     - [x] exchange code for access token to post https://github.com/login/oauth/access_token with
-- [] get state
-- [] verify IF state.exists()
+- [ ] get state
+- [ ] verify IF state.exists()
 - [x] exchange code for access_token
 - [x] POST https://github.com/login/oauth/access_token
 - [x] client_id string Required. The client ID for your GitHub App.
