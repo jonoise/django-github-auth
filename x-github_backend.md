@@ -14,24 +14,55 @@
 - [x] client_secret string Required. The client secret for your GitHub App.
 - [x] code string Required. The code you received as a response to Step 1.
 
-### RESPONSE:
+CREATING USER MODEL
 
-```JSON
-{
-  "access_token": "ghu_16C7e42F292c6912E7710c838347Ae178B4a",
-  "expires_in": 28800,
-  "refresh_token": "ghr_1B4a2e77838347a7E420ce178F2E7c6912E169246c34E1ccbF66C46812d16D5B1A9Dc86A1498",
-  "refresh_token_expires_in": 15811200,
-  "scope": "",
-  "token_type": "bearer"
-}
-```
+- [x] Create Manager
+- [x] Create User
+- [ ] Create Profile
+- [ ] Create Signals
+  - [ ] Connect to Apps
 
-# Your GitHub App accesses the API with the user's access token
+USER SERIALIZER
 
-The user's access token allows the GitHub App to make requests to the API on behalf of a user.
+- [ ] Create serializer
+- [ ]
 
-```shell
-Authorization: token OAUTH-TOKEN
-GET https://api.github.com/user
-```
+CREATE VIEWS
+
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
+- [ ]
