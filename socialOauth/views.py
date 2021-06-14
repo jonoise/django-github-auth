@@ -3,7 +3,11 @@ import asyncio
 from .github import Github
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
-from rest_framework import status
+
+
+class GithubRegisterAPI(GenericAPIView):
+    def get(self, request):
+        res = asyncio.run(Github.get_user_authorization())
 
 
 class CallbackAPIView(GenericAPIView):
@@ -12,13 +16,12 @@ class CallbackAPIView(GenericAPIView):
     """
 
     def get(self, request):
-
-        params = request.query_params
-        code = params.get('code', None)
-        if not code:
-            return Response(status=status.HTTP_404_NOT_FOUND, data={"message": "Code is necessary"})
+        code = request.query_params.get('code', None)
         data = asyncio.run(Github.request_access_token(code))
-        access = data.get('access_token')
-        data = asyncio.run(Github.validate(access))
+        access_token = data.get('access_token')
+        user_email = asyncio.run(Github.get_user_email(access_token))
 
-        return Response(data=data)
+        user = Github.register_or_authenticate(
+            user_email=user_email, access_token=access_token)
+
+        return Response(data=user)
