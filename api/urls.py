@@ -8,5 +8,6 @@ app_name = 'api'
 urlpatterns = [
     path('social/', include('socialOauth.urls'), name='social'),
     path('auth/', include('authentication.urls'), name='auth'),
-
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
